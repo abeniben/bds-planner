@@ -66,7 +66,7 @@ export function ActionItems({ actionItems, meetings, onUpdate }: ActionItemsProp
           description: formData.description,
           assignee: formData.assignee,
           due_date: format(formData.due_date, 'yyyy-MM-dd'),
-          meeting_id: formData.meeting_id || null
+          meeting_id: formData.meeting_id === 'none' ? null : formData.meeting_id || null
         });
 
       if (error) throw error;
@@ -193,7 +193,7 @@ export function ActionItems({ actionItems, meetings, onUpdate }: ActionItemsProp
                     <SelectValue placeholder="Select a meeting" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">No meeting</SelectItem>
+                    <SelectItem value="none">No meeting</SelectItem>
                     {meetings.map((meeting) => (
                       <SelectItem key={meeting.id} value={meeting.id}>
                         {meeting.title} - {format(new Date(meeting.date), 'MMM dd')}

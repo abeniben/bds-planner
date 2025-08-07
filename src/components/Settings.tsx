@@ -339,9 +339,8 @@ export function Settings({ onUpdate }: SettingsProps) {
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground">
-            BDS Planner is a comprehensive content creation team management tool designed to help 
-            teams coordinate meetings, track action items, brainstorm content ideas, and monitor progress. 
-            Built with React, Tailwind CSS, and Supabase for a modern, responsive experience.
+            BDS Planner is a comprehensive content creation team management tool for Big Data Specialist designed to help 
+            teams coordinate meetings, track action items, brainstorm content ideas, and monitor progress.
           </p>
         </CardContent>
       </Card>
